@@ -10,6 +10,8 @@ if __name__ == '__main__':
     parser.add_argument('--engine_type', type=str, required=True)
     args = parser.parse_args()
 
+    print('Engine type is %s' % str(args.engine_type))
+
     dataset = Dataset.create('librispeech')
     print('loaded %s with %.2f hours of data' % (str(dataset), dataset.size_hours()))
 
