@@ -17,3 +17,17 @@ In order to run this benchmark you have to add the Tuda-de_v2 dataset to the res
 In order to use the mozilla models, you have to place the resource files under resources/deepspeech05 or resources/deepspeech06) (see engine.py for details)
 
 In order to use the kaldi model, kaldi has to be accessible via the following url: http://localhost:8080/client/dynamic/recognize. This can be achieved by running kaldi via the [kaldi-gstreamer-server](https://github.com/alumae/kaldi-gstreamer-server) (see engine.py for details). 
+
+## Results
+
+These findings are from May 2020. The following hardware was used for the tests: Mac Mini (2018), 3.6 GHz Quad Core Intel Core i3, 8 GB 2667 MHz DDR4. The average upload speed was 9.5Mbps. The hardware is particularly relevant to the results of Mozilla DeepSpeech and Kaldi, as these were run locally. The other services mentioned are hosted externally and were accessed via API. The total duration is given in the format hour:minute:second.
+
+| | Word error count |	WER, data in percent	| Compound errors |	WER without compound errors, data in percent |	total duration 
+|--|--------------|-------------------------|-----------------|----------------------------------------------|------------
+Google Speech-to-text |	2143 |	12.32 |	210 |	11.72 |	00:29:48
+Amazon Transcribe |	2307 |	13.26 |	428 | 12.05 | 20:26:01
+Azure Speech to text |	2114 |	12.15 |	184 |	11.62 |	01:14:02
+Watson Speech to text |	3418	| 19.64 |	369 |	18.61 |	00:52:54
+Mozilla DeepSpeech 0.5.0 | 	12721 |	73.11 |	91	| 72.85 |	01:56:00
+Mozilla DeepSpeech 0.6.0 |	5585 |	32.10 |	184 |	31.63 |	01:05:00
+Kaldi |	2965	| 17.04 |	511 |	15.71 |	04:26:42
