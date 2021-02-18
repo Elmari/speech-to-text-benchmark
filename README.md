@@ -2,6 +2,7 @@
 
 Benchmark for german language models, based on the [benchmark]((https://github.com/Picovoice/speech-to-text-benchmark)) of [Picovoice](https://picovoice.ai).
  The speechdata-corpus [Tuda-de v2](https://www.inf.uni-hamburg.de/en/inst/ab/lt/resources/data/acoustic-models.html) is used as the test data set. 
+Since the number of freely available German corpora is small, it does not seem possible to use a corpus for testing whose training portion was not also used in at least one of the two open source models. The results must therefore be considered as in-domain test results, but allow, if not an absolute, at least a relative comparability of the results. Since, according to [Agarwal and Zesch (2019)](https://www.researchgate.net/publication/336532830_German_End-to-end_Speech_Recognition_based_on_DeepSpeech) as well as [Milde and Köhn (2018)](https://ieeexplore.ieee.org/abstract/document/8578033), composite errors, i.e., the separation of compound words into single words, occur frequently but can be assumed not to seriously interfere with comprehension, this type of error was counted and the WER without these errors was additionally computed. 
 
 ## Installation and Usage
 
